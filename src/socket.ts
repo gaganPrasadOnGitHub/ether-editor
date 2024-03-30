@@ -8,5 +8,6 @@ export const initSocket = async () => {
     transport: ['websocket'],
   };
 
-  return io('https://ether-editor-0e22562dd46d.herokuapp.com', options);
+  const hostUrl = process.env.HOST_URL || 'http://localhost:5000';
+  return io(hostUrl, options);
 };
