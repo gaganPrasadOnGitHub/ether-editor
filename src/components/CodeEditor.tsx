@@ -6,6 +6,7 @@ import { Socket } from 'socket.io-client';
 import { ACTIONS } from '../utils/constants';
 import { rosePineDawn, birdsOfParadise } from 'thememirror';
 import { useTheme } from '../contexts/ThemeContext';
+import { indentWithTab, insertNewlineAndIndent } from '@codemirror/commands';
 
 interface EditorProp {
   socketRef: Socket | null;
@@ -25,13 +26,6 @@ const CodeEditor: React.FC<EditorProp> = ({ socketRef, roomId }) => {
 
   const { theme } = useTheme();
 
-  const disableEnter = keymap.of([
-    {
-      key: 'Enter',
-      run: () => true,
-    },
-  ]);
-
   useEffect(() => {
     if (!editorRef.current || !socketRef) return;
 
@@ -47,7 +41,10 @@ const CodeEditor: React.FC<EditorProp> = ({ socketRef, roomId }) => {
         editorTheme,
         EditorView.lineWrapping,
         lineNumbers(),
-        disableEnter,
+        keymap.of([
+          indentWithTab,
+          { key: 'Enter', run: insertNewlineAndIndent },
+        ]),
         EditorView.updateListener.of((update) => {
           if (
             update.docChanged &&
