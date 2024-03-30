@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { EditorState } from '@codemirror/state';
-import { EditorView, lineNumbers } from '@codemirror/view';
+import { EditorView, keymap, lineNumbers } from '@codemirror/view';
 import { javascript } from '@codemirror/lang-javascript';
 import { Socket } from 'socket.io-client';
 import { ACTIONS } from '../utils/constants';
@@ -25,6 +25,13 @@ const CodeEditor: React.FC<EditorProp> = ({ socketRef, roomId }) => {
 
   const { theme } = useTheme();
 
+  const disableEnter = keymap.of([
+    {
+      key: 'Enter',
+      run: () => true,
+    },
+  ]);
+
   useEffect(() => {
     if (!editorRef.current || !socketRef) return;
 
@@ -40,6 +47,7 @@ const CodeEditor: React.FC<EditorProp> = ({ socketRef, roomId }) => {
         editorTheme,
         EditorView.lineWrapping,
         lineNumbers(),
+        disableEnter,
         EditorView.updateListener.of((update) => {
           if (
             update.docChanged &&
