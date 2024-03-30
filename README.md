@@ -45,7 +45,7 @@ Open your browser and navigate to http://localhost:5000 to start using Ether Edi
 
 ### Note
 
-Update the env variable PORT and HOST_URL to http://localhost:5000
+Update the variable cors origin in server.js and hostUrl in socket.ts to http://localhost:5000
 
 ## License
 
