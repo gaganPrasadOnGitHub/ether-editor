@@ -31,8 +31,7 @@ const CodeEditor: React.FC<EditorProp> = ({ socketRef, roomId }) => {
     const editorTheme = theme === 'day' ? noctisLilac : dracula;
 
     const savedCode =
-      getCodeFromLocal(roomId) ||
-      '// Welcome to ether editor a powerful real-time, collaborative JavaScript editor, designed for live coding sessions\n';
+      getCodeFromLocal(roomId) || '// Welcome to ether editor\n';
 
     const startState = EditorState.create({
       doc: savedCode,
