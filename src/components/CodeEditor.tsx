@@ -4,7 +4,7 @@ import { EditorView, lineNumbers } from '@codemirror/view';
 import { javascript } from '@codemirror/lang-javascript';
 import { Socket } from 'socket.io-client';
 import { ACTIONS } from '../utils/constants';
-import { noctisLilac, dracula } from 'thememirror';
+import { rosePineDawn, birdsOfParadise } from 'thememirror';
 import { useTheme } from '../contexts/ThemeContext';
 
 interface EditorProp {
@@ -28,7 +28,7 @@ const CodeEditor: React.FC<EditorProp> = ({ socketRef, roomId }) => {
   useEffect(() => {
     if (!editorRef.current || !socketRef) return;
 
-    const editorTheme = theme === 'day' ? noctisLilac : dracula;
+    const editorTheme = theme === 'day' ? rosePineDawn : birdsOfParadise;
 
     const savedCode =
       getCodeFromLocal(roomId) || '// Welcome to ether editor\n';
