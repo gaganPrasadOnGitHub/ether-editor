@@ -1,38 +1,280 @@
-.App {
+button,
+input {
+  border: none;
+  height: 42px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+button {
+  gap: 8px;
+  display: flex;
+  cursor: pointer;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-special);
+}
+
+button:hover {
+  translate: 0 2px;
+  background: #ccc;
+}
+
+input {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 0 16px;
+}
+
+textarea:focus,
+button:focus,
+input:focus,
+textarea:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--main-color);
+}
+
+.primary-btn {
+  color: var(--white);
+  background: var(--main-color);
+}
+
+.primary-btn:hover {
+  color: var(--white);
+  background: var(--main-color);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.default-layout {
+  display: flex;
+  height: 100dvh;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.container {
+  width: 100%;
+  padding: 8px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.flex-default {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.mt-3 {
+  margin-top: 3px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.relative {
+  position: relative;
+}
+
+#footer {
+  margin-top: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.time-part {
+  display: none;
+}
+
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.home {
+  margin: auto;
+  flex-direction: column;
+}
+
+.main-entry-form {
+  width: 100%;
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-buttons {
+  width: 100%;
+  max-width: 400px;
+}
+
+.main-heading {
+  font-size: 48px;
+}
+
+.logo {
+  width: 80%;
+  max-width: 280px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.error {
+  width: 100%;
+  bottom: -80px;
+  max-width: 400px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  position: absolute;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.error-icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.notification {
+  top: 32px;
+  left: 50%;
+  z-index: 1;
+  translate: -50% 0;
+  padding: 8px;
+  position: absolute;
+  border-radius: 4px;
+  color: var(--white);
+  background: var(--main-color);
+}
+
+.button-container {
+  position: relative;
+}
+
+.copied-notification {
+  top: unset;
+  left: unset;
+  translate: 0;
+  bottom: -40px;
+}
+
+.editor-nav-item {
+  gap: 4px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text-color);
 }
 
-.App-link {
-  color: #61dafb;
+.arrow {
+  width: 10px;
+  height: 10px;
+  margin-top: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.rotate-180 {
+  rotate: 180deg;
+}
+
+.editor-nav-item:hover {
+  color: var(--main-color);
+  translate: 0 2px;
+}
+
+.team-members {
+  top: 24px;
+  z-index: 1;
+  width: 100%;
+  padding: 8px;
+  max-width: 240px;
+  max-height: 400px;
+  position: absolute;
+  border-radius: 8px;
+  background: var(--bg-translucent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 2px solid var(--main-color);
+}
+
+.member-card {
+  gap: 16px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  color: var(--white);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  background: var(--main-color);
+}
+
+.cm-editor {
+  height: calc(100dvh - 200px);
+  margin: 24px 0;
+}
+
+.ͼ1.cm-editor.cm-focused {
+  outline: 2px solid var(--main-color);
+}
+
+@media screen and (min-width: 400px) {
+  .time-part {
+    display: inline;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 768px) {
+  .main-heading {
+    font-size: 64px;
+  }
+
+  .home {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 80%;
   }
 }

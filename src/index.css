@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --white: white;
+  --black: #000;
+  --background-color: #f9f9f9;
+  --bg-translucent: #ffffff55;
+  --text-color: #07080b;
+  --text-special: rgb(95, 99, 104);
+  --main-color: #ff8906;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[data-theme='night'] {
+  --background-color: #07080b;
+  --text-color: #ffffff;
+  --bg-translucent: #00000055;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  transition: all ease-in-out 200ms;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+.main-color {
+  color: var(--main-color);
 }

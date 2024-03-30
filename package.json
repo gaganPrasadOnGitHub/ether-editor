@@ -3,21 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@codemirror/commands": "^6.3.3",
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@codemirror/language": "^6.10.1",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/view": "^6.26.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.91",
     "@types/react": "^18.2.72",
     "@types/react-dom": "^18.2.22",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "thememirror": "^2.0.1",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:front": "react-scripts start",
+    "start": "npm run build && npm run prod:server",
+    "dev:server": "nodemon server.js",
+    "prod:server": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,9 +49,17 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 2 version"
     ]
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "@types/socket.io": "^3.0.2",
+    "@types/uuid": "^9.0.8",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
   }
 }
