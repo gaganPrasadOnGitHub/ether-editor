@@ -64,12 +64,12 @@ const CodeEditor: React.FC<EditorProp> = ({ socketRef, roomId }) => {
     });
 
     socketRef.on(ACTIONS.REQUEST_CURRENT_CODE, ({ requester }) => {
-      const currentCode = view.state.doc.toString();
       socketRef.emit(ACTIONS.SEND_CURRENT_CODE, {
-        code: currentCode,
+        code: view.state.doc.toString(),
         roomId,
         requester,
       });
+      saveCodeToLocal(view.state.doc.toString(), roomId);
     });
 
     socketRef.on(
