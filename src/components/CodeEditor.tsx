@@ -80,6 +80,7 @@ const CodeEditor: React.FC<EditorProp> = ({ socketRef, roomId }) => {
             changes: { from: 0, to: view.state.doc.length, insert: data.code },
           });
         }
+        saveCodeToLocal(view.state.doc.toString(), roomId);
       }
     );
 
