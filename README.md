@@ -1,4 +1,4 @@
-# [Ether Editor](https://ether-editor-0e22562dd46d.herokuapp.com) - Collaborative Real-Time Editor
+# [Ether Editor](https://ether-editor-q2mv.onrender.com/) - Collaborative Real-Time Editor
 
 Ether Editor is a cutting-edge collaborative editor that enables multiple users to edit JavaScript code in real-time. Built with the modern web in mind, it leverages React, TypeScript, Express, CodeMirror v6, and Socket.IO to provide an interactive coding environment. Ether Editor is perfect for live coding sessions, coding interviews, educational purposes, and any scenario where real-time code collaboration is required. With added support for light and dark modes, it offers a comfortable coding experience for all users.
 
@@ -8,7 +8,7 @@ Ether Editor is a cutting-edge collaborative editor that enables multiple users 
 - **Persistent Local Storage**: Users' progress is saved locally for the duration of the session, ensuring that no work is lost even if the page is refreshed.
 - **Light and Dark Mode**: Cater to your preference or coding environment with easily toggleable light and dark modes.
 - **Built with Modern Technologies**: Utilizes React, TypeScript, Express, CodeMirror v6, and Socket.IO for a smooth and responsive user experience.
-- **Deployed and Accessible**: Available online at [Ether Editor](https://ether-editor-0e22562dd46d.herokuapp.com 'Collaborative Real-Time Editor')., ready for use at any time.
+- **Deployed and Accessible**: Available online at [Ether Editor](https://ether-editor-q2mv.onrender.com/ 'Collaborative Real-Time Editor')., ready for use at any time.
 
 ## Getting Started
 
@@ -60,6 +60,6 @@ The development and deployment of Ether Editor have been made possible by levera
 - **Express**: Served as the backbone of our backend services, enabling robust server-side functionality.
 - **CodeMirror v6**: Selected for the interactive code editor feature, offering extensive customization and support for various programming languages.
 - **Socket.IO**: Essential for enabling real-time bidirectional event-based communication, facilitating the collaborative aspect of the editor.
-- **Heroku**: Our choice for deployment, Heroku has simplified the process of bringing Ether Editor to the public. Its platform has allowed us to deploy our application efficiently, ensuring it is accessible worldwide.
+- **Rendrer**: Our choice for deployment, Rendrer has simplified the process of bringing Ether Editor to the public. Its platform has allowed us to deploy our application efficiently, ensuring it is accessible worldwide.
 
 A special thanks goes to the open-source community and the contributors of these technologies. Your efforts and innovations continue to empower developers and creators around the globe.
