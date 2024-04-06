@@ -45,7 +45,7 @@ Open your browser and navigate to http://localhost:5000 to start using Ether Edi
 
 ### Note
 
-Update the variable cors origin in server.js and hostUrl in socket.ts to http://localhost:5000
+Update the CORS origin in server.js and hostUrl in socket.ts to http://localhost:5000 for local development.
 
 ## License
 
@@ -53,13 +53,13 @@ Ether Editor is open-sourced software licensed under the MIT license.
 
 ## Acknowledgments
 
-The development and deployment of Ether Editor have been made possible by leveraging several key technologies and platforms. We express our gratitude towards the following tools and services for their invaluable role in bringing this project to life:
+The development and deployment of Ether Editor was realized by leveraging several key technologies and platforms. Gratitude is extended towards the following tools and services for their invaluable role in bringing this project to life:
 
-- **React**: Utilized for crafting the user interface, providing a responsive and intuitive user experience.
-- **TypeScript**: Implemented for adding type safety to the JavaScript code, enhancing development efficiency and reducing runtime errors.
-- **Express**: Served as the backbone of our backend services, enabling robust server-side functionality.
-- **CodeMirror v6**: Selected for the interactive code editor feature, offering extensive customization and support for various programming languages.
-- **Socket.IO**: Essential for enabling real-time bidirectional event-based communication, facilitating the collaborative aspect of the editor.
-- **Rendrer**: Our choice for deployment, Rendrer has simplified the process of bringing Ether Editor to the public. Its platform has allowed us to deploy our application efficiently, ensuring it is accessible worldwide.
+- **React**: For crafting the user interface, providing a responsive and intuitive user experience.
+- **TypeScript**: For adding type safety to the JavaScript code, enhancing development efficiency and reducing runtime errors.
+- **Express**: As the backbone of backend services, enabling robust server-side functionality.
+- **CodeMirror v6**: Chosen for the interactive code editor feature, offering extensive customization and support for various programming languages.
+- **Socket.IO**: Crucial in enabling real-time bidirectional event-based communication, facilitating the collaborative aspect of the editor.
+- **Rendrer**: Streamlined the process of making Ether Editor public. The platform facilitated efficient deployment, ensuring global accessibility.
 
 A special thanks goes to the open-source community and the contributors of these technologies. Your efforts and innovations continue to empower developers and creators around the globe.
