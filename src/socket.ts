@@ -8,6 +8,6 @@ export const initSocket = async () => {
     transport: ['websocket'],
   };
 
-  const hostUrl = 'https://ether-editor-0e22562dd46d.herokuapp.com';
+  const hostUrl = 'https://ether-editor-q2mv.onrender.com';
   return io(hostUrl, options);
 };
