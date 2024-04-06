@@ -16,7 +16,7 @@ app.use((req, res) => {
 
 const io = new Server(httpServer, {
   cors: {
-    origin: 'https://ether-editor-0e22562dd46d.herokuapp.com',
+    origin: 'https://ether-editor-q2mv.onrender.com',
     credentials: true,
   },
 });
