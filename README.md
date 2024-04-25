@@ -61,5 +61,3 @@ The development and deployment of Ether Editor was realized by leveraging severa
 - **CodeMirror v6**: Chosen for the interactive code editor feature, offering extensive customization and support for various programming languages.
 - **Socket.IO**: Crucial in enabling real-time bidirectional event-based communication, facilitating the collaborative aspect of the editor.
 - **Render**: Streamlined the process of making Ether Editor public. The platform facilitated efficient deployment, ensuring global accessibility.
-
-A special thanks goes to the open-source community and the contributors of these technologies. Your efforts and innovations continue to empower developers and creators around the globe.
